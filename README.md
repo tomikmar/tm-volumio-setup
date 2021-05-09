@@ -85,7 +85,7 @@ echo "30  9   * * *   volumio volumio volume 35 >> /home/volumio/cron.log" >> /e
 
 Night settings - decrease volume and stop playing
 ```
-echo " 0 23   * * *   volumio /opt/volumio-scripts/decrease-volume.sh 35 >> /home/volumio/cron.log" >> /etc/crontab
+echo " 0 23   * * *   volumio /opt/volumio-scripts/decrease-volume.sh 34 >> /home/volumio/cron.log" >> /etc/crontab
 echo "30 23   * * *   volumio /opt/volumio-scripts/decrease-volume.sh 30 >> /home/volumio/cron.log" >> /etc/crontab 
 echo " 0  0   * * *   volumio /opt/volumio-scripts/decrease-volume.sh 24 >> /home/volumio/cron.log" >> /etc/crontab 
 echo "30  0   * * *   volumio /opt/volumio-scripts/decrease-volume.sh 19 >> /home/volumio/cron.log" >> /etc/crontab
