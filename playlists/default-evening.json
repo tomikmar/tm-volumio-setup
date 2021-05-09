@@ -1,0 +1,15 @@
+[
+   {
+      "service": "webradio",
+      "type": "webradio",
+      "title": "1.FM - Love Classics Radio",
+      "icon": "fa-microphone",
+      "uri": "http://opml.radiotime.com/Tune.ashx?id=s214681",
+      "name": "1.FM - Love Classics Radio",
+      "albumart": "/albumart",
+      "samplerate": "",
+      "bitdepth": 0,
+      "channels": 0
+   }
+]
+

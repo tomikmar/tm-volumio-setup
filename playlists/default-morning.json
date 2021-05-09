@@ -1,0 +1,15 @@
+[
+   {
+      "service": "webradio",
+      "type": "webradio",
+      "title": "Classic Hits 109 - 70s, 80s, 90s",
+      "icon": "fa-microphone",
+      "uri": "http://opml.radiotime.com/Tune.ashx?id=s298146",
+      "name": "Classic Hits 109 - 70s, 80s, 90s",
+      "albumart": "/albumart",
+      "samplerate": "",
+      "bitdepth": 0,
+      "channels": 0
+   }
+]
+
