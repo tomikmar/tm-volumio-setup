@@ -102,7 +102,7 @@ echo " 0  1   * * *   volumio (date && /usr/local/bin/volumio stop) >> /home/vol
 
 Other
 ```
-echo "@reboot volumio espeak -a 200 "Volumio is starting." --stdout | aplay -Dhw:1,0" >> /etc/crontab
+echo '@reboot volumio espeak -a 200 "Volumio is starting." --stdout | aplay -Dhw:1,0' >> /etc/crontab
 ```
 
 

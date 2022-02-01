@@ -27,3 +27,8 @@ illuminate() {
     fi
 }
 
+
+getVolume() {
+    amixer -c 1 -M get 'Headphone' | grep '%' | cut -d '[' -f2 | tr -d '%]'
+}
+
