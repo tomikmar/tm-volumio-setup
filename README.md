@@ -140,6 +140,29 @@ echo "@reboot root chmod o+w /sys/class/leds/rt2800usb-phy0::assoc/brightness" >
 
 
 
+Notes - sound tools
+-------------------
+
+How Volumio controls volume?
+
+```
+amixer -c 1 -M get 'Headphone'
+amixer -c 1 -M set 'Headphone' 60%
+grep amixer /volumio/app/volumecontrol.js
+```
+
+Other tools
+
+```
+aplay -l
+speaker-test -Dhw:1,0 -c2 -twav -l7
+alsamixer -c 1
+amixer -c 1 scontents
+amixer -c 1 contents
+```
+
+
+
 Notes (WIP)
 -----------
 
@@ -166,10 +189,5 @@ update-rc.d samba-ad-dc remove
 
 #? update-rc.d avahi-daemon remove
 #? update-rc.d rpcbind remove
-```
-
-```
-aplay -l
-speaker-test -Dhw:1,0 -c2 -twav -l7
 ```
 
