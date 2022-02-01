@@ -6,8 +6,15 @@ Volumio configuration template. Tested on:
   * Raspberry Pi 1 Model B
   * USB Wifi Adapter (148f:5370 -> modinfo rt2800usb)
   * Creative Pebble V2 speakers connected by 3.5mm jack (powered by USB)
-  * Volumio 2.x
-    * cat /etc/os-release -> Raspbian GNU/Linux 8 (jessie)
+  * Volumio 3.x
+    * cat /etc/os-release -> Raspbian GNU/Linux 10 (buster)
+
+
+
+Installation
+------------
+
+  * dd if=Volumio-3.198-2022-01-24-pi.img of=MY-SDCARD-DEVICE  bs=4M status=progress
 
 
 
@@ -28,6 +35,7 @@ Network
 System
 
   * Disable sending UI stats
+    * this disables sending data to facebook and google
 
 
 
@@ -41,13 +49,14 @@ Configuration - SSH
   * Update and fix after the update
     * sudo apt update
     * sudo apt upgrade
-    * sudo echo "/opt/vc/lib" >> /etc/ld.so.conf
-    * sudo ldconfig
+    * reboot
+    * ~~~sudo echo "/opt/vc/lib" >> /etc/ld.so.conf~~~
+    * ~~~sudo ldconfig~~~
 
   * Install tools 
     * sudo apt install vim
     * select-editor
-    * sudo apt install cron exim4- (install cron without dependencies)
+    * sudo apt install cron exim4-base- (install cron without dependencies)
     * sudo apt install espeak
 
   * Set timezone
@@ -106,6 +115,7 @@ Autostart web radio
 Add playlist
 
 ```
+# Run as "volumio" user
 wget https://github.com/tomikmar/tm-volumio-setup/raw/master/playlists/default-morning.json -O /data/playlist/default-morning.json 
 wget https://github.com/tomikmar/tm-volumio-setup/raw/master/playlists/default-evening.json -O /data/playlist/default-evening.json 
 ```
@@ -113,6 +123,7 @@ wget https://github.com/tomikmar/tm-volumio-setup/raw/master/playlists/default-e
 Add start script
 
 ```
+# Run as "root"
 export CUSTOM_VOLUMIO=/opt/volumio-scripts
 echo "@reboot volumio $CUSTOM_VOLUMIO/play-default-playlist.sh >> /home/volumio/cron.log" >> /etc/crontab
 ```
@@ -125,6 +136,7 @@ Add illumination
 Allow users to enable/disable wifi activity LED to visualize some actions.
 
 ```
+# Run as "root"
 echo "@reboot root chmod o+w /sys/class/leds/rt2800usb-phy0::assoc/brightness" >> /etc/crontab
 ```
 
