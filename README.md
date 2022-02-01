@@ -7,6 +7,7 @@ Volumio configuration template. Tested on:
   * USB Wifi Adapter (148f:5370 -> modinfo rt2800usb)
   * Creative Pebble V2 speakers connected by 3.5mm jack (powered by USB)
   * Volumio 2.x
+    * cat /etc/os-release -> Raspbian GNU/Linux 8 (jessie)
 
 
 
@@ -65,10 +66,10 @@ Download scripts
 export CUSTOM_VOLUMIO=/opt/volumio-scripts
 mkdir -p $CUSTOM_VOLUMIO
 cd $CUSTOM_VOLUMIO
-wget https://github.com/tomikmar/tm-linux-setup/raw/master/volumio/common.sh
-wget https://github.com/tomikmar/tm-linux-setup/raw/master/volumio/play-default-playlist.sh
-wget https://github.com/tomikmar/tm-linux-setup/raw/master/volumio/decrease-volume.sh
-wget https://github.com/tomikmar/tm-linux-setup/raw/master/volumio/illuminate.sh
+wget https://github.com/tomikmar/tm-volumio-setup/raw/master/common.sh
+wget https://github.com/tomikmar/tm-volumio-setup/raw/master/play-default-playlist.sh
+wget https://github.com/tomikmar/tm-volumio-setup/raw/master/decrease-volume.sh
+wget https://github.com/tomikmar/tm-volumio-setup/raw/master/illuminate.sh
 chmod +x *.sh
 
 ```
@@ -105,8 +106,8 @@ Autostart web radio
 Add playlist
 
 ```
-wget https://github.com/tomikmar/tm-linux-setup/raw/master/volumio/playlists/default-morning.json -O /data/playlist/default-morning.json 
-wget https://github.com/tomikmar/tm-linux-setup/raw/master/volumio/playlists/default-evening.json -O /data/playlist/default-evening.json 
+wget https://github.com/tomikmar/tm-volumio-setup/raw/master/playlists/default-morning.json -O /data/playlist/default-morning.json 
+wget https://github.com/tomikmar/tm-volumio-setup/raw/master/playlists/default-evening.json -O /data/playlist/default-evening.json 
 ```
 
 Add start script
