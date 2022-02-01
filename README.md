@@ -50,8 +50,6 @@ Configuration - SSH
     * sudo apt update
     * sudo apt upgrade
     * reboot
-    * ~~~sudo echo "/opt/vc/lib" >> /etc/ld.so.conf~~~
-    * ~~~sudo ldconfig~~~
 
   * Install tools 
     * sudo apt install vim
