@@ -102,6 +102,7 @@ echo " 0  1   * * *   volumio (date && /usr/local/bin/volumio stop) >> /home/vol
 
 Other
 ```
+echo '@reboot volumio echo -e "\n\n\n`date +"%F %T %Z:"` Starting Volumio ..."' >> /etc/crontab
 echo '@reboot volumio espeak -a 200 "Volumio is starting." --stdout | aplay -Dhw:1,0' >> /etc/crontab
 ```
 
@@ -156,9 +157,14 @@ Other tools
 ```
 aplay -l
 speaker-test -Dhw:1,0 -c2 -twav -l7
+
 alsamixer -c 1
 amixer -c 1 scontents
 amixer -c 1 contents
+
+alsactl monitor
+alsactl store / restore
+/var/lib/alsa/asound.state
 ```
 
 
