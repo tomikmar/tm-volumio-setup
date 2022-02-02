@@ -28,11 +28,11 @@ logAndSay "Volumio server is running. Starting playlist ..."
 HOUR=`date +%H`
 if [ $HOUR -lt 11 ]; then
     log "Starting morning playlist $PLAYLIST_MORNING ..."
-    volumio volume 40
+    volumio volume 35
     curl "${VOLUMIO_BASE_URL}/commands/?cmd=playplaylist&name=$PLAYLIST_MORNING"
 elif [ $HOUR -lt 19 ]; then
     log "Starting afternoon playlist $PLAYLIST_MORNING ..."
-    volumio volume 40
+    volumio volume 35
     curl "${VOLUMIO_BASE_URL}/commands/?cmd=playplaylist&name=$PLAYLIST_MORNING"
 else
     log "Starting evening playlist $PLAYLIST_EVENING ..."
